@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#ECEEEA"/>
+  <rect x="120" y="120" width="1360" height="760" rx="32" fill="none" stroke="#6B0F1A" stroke-opacity="0.25" stroke-width="4" stroke-dasharray="18 14"/>
+  <text x="800" y="520" fill="#6B0F1A" font-family="Inter, system-ui, sans-serif" font-size="96" font-weight="600" text-anchor="middle">Project 6</text>
+  <text x="800" y="600" fill="#6B0F1A" fill-opacity="0.6" font-family="Inter, system-ui, sans-serif" font-size="36" text-anchor="middle">Ganti dengan screenshot project</text>
+</svg>

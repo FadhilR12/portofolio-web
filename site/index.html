@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fadhil Rahman Yuriana</title>
+    <meta name="description" content="Portofolio Fadhil Rahman Y." />
+    <meta name="theme-color" content="#DCE0D9" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="min-h-screen overflow-x-clip bg-porto-bg text-porto-ink">
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-porto-ink focus:px-4 focus:py-2 focus:text-porto-bg"
+      >Skip to content</a
+    >
+
+    <!-- ================= NAVBAR (from navbar_reference: VitePress VPNav) ================= -->
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="nav-bar border-b border-porto-soft/40">
+        <div
+          class="mx-auto flex h-full w-full max-w-layout items-center justify-between gap-4 px-6 md:px-8"
+        >
+          <!-- Title -->
+          <a
+            href="#"
+            class="flex shrink-0 items-center gap-2 text-base font-semibold text-porto-ink transition-opacity hover:opacity-80"
+          >
+            <span>Fadhil Rahman Y</span>
+          </a>
+
+          <!-- Menu (desktop) -->
+          <nav
+            aria-label="Main navigation"
+            class="hidden flex-1 items-center justify-end md:flex"
+          >
+            <div class="flyout relative" data-flyout>
+              <button
+                type="button"
+                data-flyout-button
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="flex h-[var(--nav-height)] items-center gap-1 px-3 text-sm font-medium text-porto-ink transition-colors hover:text-porto-accent"
+              >
+                Project
+                <svg
+                  class="flyout-chevron h-3.5 w-3.5 text-porto-muted transition-transform"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div
+                class="flyout-menu absolute right-0 top-[calc(100%_-_12px)] min-w-[192px] rounded-xl border border-porto-soft/50 bg-porto-surface p-3 shadow-[0_12px_32px_rgba(49,8,31,0.12),0_2px_6px_rgba(49,8,31,0.08)]"
+              >
+                <a
+                  href="#project-1"
+                  class="block whitespace-nowrap rounded-md px-3 text-sm font-medium leading-8 text-porto-ink transition-colors hover:bg-porto-bg hover:text-porto-accent"
+                  >Project Terbaru</a
+                >
+                <a
+                  href="#project-2"
+                  class="block whitespace-nowrap rounded-md px-3 text-sm font-medium leading-8 text-porto-ink transition-colors hover:bg-porto-bg hover:text-porto-accent"
+                  >Project 2</a
+                >
+                <a
+                  href="#project-3"
+                  class="block whitespace-nowrap rounded-md px-3 text-sm font-medium leading-8 text-porto-ink transition-colors hover:bg-porto-bg hover:text-porto-accent"
+                  >Project 3</a
+                >
+                <a
+                  href="#project-4"
+                  class="block whitespace-nowrap rounded-md px-3 text-sm font-medium leading-8 text-porto-ink transition-colors hover:bg-porto-bg hover:text-porto-accent"
+                  >Project 4</a
+                >
+                <div class="my-2 h-px bg-porto-soft/40" role="separator"></div>
+                <a
+                  href="https://github.com/?tab=repositories"
+                  target="_blank"
+                  rel="noopener"
+                  class="block whitespace-nowrap rounded-md px-3 text-sm font-medium leading-8 text-porto-ink transition-colors hover:bg-porto-bg hover:text-porto-accent"
+                  >Semua repo GitHub ↗</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <!-- Social links + hamburger -->
+          <div class="flex items-center">
+            <span
+              class="mx-2 hidden h-6 w-px bg-porto-soft/50 md:block"
+              aria-hidden="true"
+            ></span>
+            <div class="hidden items-center md:flex">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                class="flex h-9 w-9 items-center justify-center text-porto-muted transition-colors hover:text-porto-ink"
+              >
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://discord.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Discord"
+                class="flex h-9 w-9 items-center justify-center text-porto-muted transition-colors hover:text-porto-ink"
+              >
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.3 18.3 0 0 0-5.487 0a13 13 0 0 0-.617-1.25a.08.08 0 0 0-.079-.037A19.7 19.7 0 0 0 3.677 4.37a.1.1 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.08.08 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.08.08 0 0 0 .084-.028a14 14 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13 13 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10 10 0 0 0 .372-.292a.07.07 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.07.07 0 0 1 .078.01q.181.149.373.292a.077.077 0 0 1-.006.127a12.3 12.3 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.08.08 0 0 0 .084.028a19.8 19.8 0 0 0 6.002-3.03a.08.08 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.03M8.02 15.33c-1.182 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418m7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                class="flex h-9 w-9 items-center justify-center text-porto-muted transition-colors hover:text-porto-ink"
+              >
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <button
+              id="nav-toggle"
+              type="button"
+              aria-label="Open navigation"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+              class="-mr-2 flex h-12 w-12 items-center justify-center text-porto-ink md:hidden"
+            >
+              <svg
+                data-icon="open"
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+              <svg
+                data-icon="close"
+                class="icon hidden"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M6 6l12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile panel -->
+      <div
+        id="mobile-nav"
+        data-open="false"
+        class="border-b border-porto-soft/40 bg-porto-bg md:hidden"
+      >
+        <nav
+          aria-label="Mobile navigation"
+          class="flex flex-col px-6 pb-6 pt-2"
+        >
+          <details class="group border-b border-porto-soft/30">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between py-3 text-sm font-medium text-porto-ink"
+            >
+              Project
+              <svg
+                class="h-4 w-4 text-porto-muted transition-transform group-open:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="flex flex-col pb-3 pl-4 text-sm text-porto-muted">
+              <a href="#project-1" class="py-1.5 hover:text-porto-accent"
+                >Project Terbaru</a
+              >
+              <a href="#project-2" class="py-1.5 hover:text-porto-accent"
+                >Project 2</a
+              >
+              <a href="#project-3" class="py-1.5 hover:text-porto-accent"
+                >Project 3</a
+              >
+              <a href="#project-4" class="py-1.5 hover:text-porto-accent"
+                >Project 4</a
+              >
+              <a
+                href="https://github.com/?tab=repositories"
+                target="_blank"
+                rel="noopener"
+                class="py-1.5 hover:text-porto-accent"
+                >Semua repo GitHub ↗</a
+              >
+            </div>
+          </details>
+          <div class="flex items-center gap-4 pt-4 text-porto-muted">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener"
+              class="text-sm hover:text-porto-ink"
+              >GitHub</a
+            >
+            <a
+              href="https://discord.com/"
+              target="_blank"
+              rel="noopener"
+              class="text-sm hover:text-porto-ink"
+              >Discord</a
+            >
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              class="text-sm hover:text-porto-ink"
+              >LinkedIn</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= BODY (from body_reference: readfrog landing) ================= -->
+    <main id="content" class="flex flex-col pt-16">
+      <!-- Hero -->
+      <section
+        class="relative flex flex-col items-center justify-center overflow-clip py-12 md:pb-24 md:pt-28"
+      >
+        <div
+          class="hero-art pointer-events-none absolute inset-0 z-10 hidden xl:block"
+        >
+          <!-- Left of profile -->
+          <div
+            class="absolute right-[calc(50%+var(--hero-art-edge)+2rem)] top-28 motion-safe:animate-hero-float"
+          >
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener"
+              class="pointer-events-auto block w-[11.5rem] rounded-3xl border border-porto-soft/40 bg-porto-surface/90 p-3 shadow-2xl shadow-porto-ink/10 backdrop-blur-md transition-transform duration-200 hover:-translate-y-1"
+            >
+              <div class="mb-3 flex items-center gap-1.5" aria-hidden="true">
+                <span class="h-2 w-2 rounded-full bg-porto-accent/70"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-soft"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-muted/60"></span>
+              </div>
+              <div class="space-y-2" aria-hidden="true">
+                <div class="h-3 w-24 rounded-full bg-porto-soft/40"></div>
+                <div class="h-2 w-full rounded-full bg-porto-bg"></div>
+                <div
+                  class="h-2 w-[8.5rem] rounded-full bg-porto-accent/15"
+                ></div>
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 rounded-2xl bg-porto-bg px-3 py-2 text-sm font-semibold text-porto-ink"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                GitHub
+              </div>
+            </a>
+          </div>
+          <div
+            class="absolute right-[calc(50%+var(--hero-art-edge))] top-[17rem] motion-safe:animate-hero-float [--float-rotate:-3deg] [animation-delay:-2s]"
+          >
+            <div
+              class="w-[11.5rem] rounded-3xl border border-porto-soft/40 bg-porto-surface/90 p-3 shadow-2xl shadow-porto-ink/10 backdrop-blur-md"
+            >
+              <div class="mb-3 flex items-center gap-1.5" aria-hidden="true">
+                <span class="h-2 w-2 rounded-full bg-porto-accent/70"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-soft"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-muted/60"></span>
+              </div>
+              <div class="space-y-2" aria-hidden="true">
+                <div class="h-3 w-24 rounded-full bg-porto-soft/40"></div>
+                <div class="h-2 w-full rounded-full bg-porto-bg"></div>
+                <div
+                  class="h-2 w-[8.5rem] rounded-full bg-porto-accent/15"
+                ></div>
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 rounded-2xl bg-porto-bg px-3 py-2 text-sm font-semibold text-porto-ink"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                Web page
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-10 right-[calc(50%+var(--hero-art-edge)-2rem)] motion-safe:animate-hero-float [animation-delay:-4s]"
+          >
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener"
+              class="pointer-events-auto block w-[11.5rem] rounded-3xl border border-porto-soft/40 bg-porto-surface/90 p-3 shadow-2xl shadow-porto-ink/10 backdrop-blur-md transition-transform duration-200 hover:-translate-y-1"
+            >
+              <div class="mb-3 flex items-center gap-1.5" aria-hidden="true">
+                <span class="h-2 w-2 rounded-full bg-porto-accent/70"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-soft"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-muted/60"></span>
+              </div>
+              <div class="space-y-2" aria-hidden="true">
+                <div class="h-3 w-24 rounded-full bg-porto-soft/40"></div>
+                <div class="h-2 w-full rounded-full bg-porto-bg"></div>
+                <div
+                  class="h-2 w-[8.5rem] rounded-full bg-porto-accent/15"
+                ></div>
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 rounded-2xl bg-porto-bg px-3 py-2 text-sm font-semibold text-porto-ink"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                Instagram
+              </div>
+            </a>
+          </div>
+
+          <!-- Right of profile -->
+          <div
+            class="absolute left-[calc(50%+var(--hero-art-edge)+1rem)] top-16 motion-safe:animate-hero-float [animation-delay:-1s]"
+          >
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              class="pointer-events-auto block w-[11.5rem] rounded-3xl border border-porto-soft/40 bg-porto-surface/90 p-3 shadow-2xl shadow-porto-ink/10 backdrop-blur-md transition-transform duration-200 hover:-translate-y-1"
+            >
+              <div class="mb-3 flex items-center gap-1.5" aria-hidden="true">
+                <span class="h-2 w-2 rounded-full bg-porto-accent/70"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-soft"></span
+                ><span class="h-2 w-2 rounded-full bg-porto-muted/60"></span>
+              </div>
+              <div class="space-y-2" aria-hidden="true">
+                <div class="h-3 w-24 rounded-full bg-porto-soft/40"></div>
+                <div class="h-2 w-full rounded-full bg-porto-bg"></div>
+                <div
+                  class="h-2 w-[8.5rem] rounded-full bg-porto-accent/15"
+                ></div>
+              </div>
+              <div
+                class="mt-4 flex items-center gap-2 rounded-2xl bg-porto-bg px-3 py-2 text-sm font-semibold text-porto-ink"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                LinkedIn
+              </div>
+            </a>
+          </div>
+          <div
+            class="absolute left-[calc(50%+var(--hero-art-edge)+3rem)] top-[14rem] motion-safe:animate-hero-float [--float-rotate:-4deg] [animation-delay:-3s]"
+            aria-hidden="true"
+          >
+            <div
+              class="w-[10.5rem] rotate-2 rounded-3xl border border-porto-soft/40 bg-porto-surface/90 p-4 shadow-2xl shadow-porto-ink/10 backdrop-blur-md"
+            >
+              <div
+                class="mb-3 flex items-center gap-2 text-sm font-bold text-porto-accent"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+                  />
+                </svg>
+                ebook
+              </div>
+              <div class="space-y-2">
+                <div class="h-2 w-full rounded-full bg-porto-soft/40"></div>
+                <div class="h-2 w-28 rounded-full bg-porto-bg"></div>
+                <div class="h-2 w-32 rounded-full bg-porto-accent/15"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-20 left-[calc(50%+var(--hero-art-edge)-1rem)] motion-safe:animate-hero-float [animation-delay:-5s]"
+            aria-hidden="true"
+          >
+            <div
+              class="w-[12.5rem] rounded-3xl border border-porto-soft/40 bg-porto-surface/90 p-3 shadow-2xl shadow-porto-ink/10 backdrop-blur-md"
+            >
+              <div
+                class="flex aspect-video items-center justify-center rounded-2xl bg-porto-ink"
+              >
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-porto-accent"
+                >
+                  <div
+                    class="ml-0.5 h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-porto-bg"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="mt-3 rounded-2xl bg-porto-bg px-3 py-2 text-center text-sm font-semibold text-porto-ink"
+              >
+                subtitles to learning
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div
+          class="relative z-30 w-full max-w-xl px-6 md:w-[44rem] md:max-w-none md:px-0"
+        >
+          <article
+            class="flex flex-col overflow-hidden rounded-3xl border border-porto-soft/40 bg-porto-surface shadow-2xl shadow-porto-ink/10 md:h-[32rem]"
+          >
+            <div class="flex items-center gap-1.5 px-4 py-3">
+              <span class="h-2.5 w-2.5 rounded-full bg-porto-accent/70"></span
+              ><span class="h-2.5 w-2.5 rounded-full bg-porto-soft"></span
+              ><span class="h-2.5 w-2.5 rounded-full bg-porto-muted/60"></span>
+              <span class="ml-auto text-xs font-medium text-porto-muted"
+                >profile</span
+              >
+            </div>
+            <div
+              class="grid min-h-0 flex-1 gap-6 p-4 pt-0 md:grid-cols-[17rem_1fr] md:p-5 md:pt-0"
+            >
+              <img
+                src="assets/canva-pria-muda-percaya-diri-dalam-pakaian-bisnis-formal-MAG68SD0vb0.jpg"
+                alt="Foto Fadhil Rahman Y"
+                class="aspect-[3/4] w-full rounded-2xl object-cover object-top md:aspect-auto md:h-full"
+              />
+              <div class="flex flex-col justify-center gap-4 md:pr-4">
+                <p class="text-sm font-semibold text-porto-accent">
+                  Halo, saya
+                </p>
+                <h1
+                  class="text-4xl font-semibold tracking-tight text-porto-ink md:text-[2.5rem] md:leading-[1.1]"
+                >
+                  Fadhil Rahman Y
+                </h1>
+                <p class="text-lg font-medium text-porto-ink">Web Developer</p>
+                <p class="text-[15px] leading-relaxed text-porto-muted">
+                  Tulis deskripsi singkat tentang dirimu di sini: apa yang kamu
+                  kerjakan, minatmu, dan apa yang sedang kamu pelajari.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-full border border-porto-soft/60 px-3 py-1 text-sm text-porto-muted"
+                    >HTML</span
+                  >
+                  <span
+                    class="rounded-full border border-porto-soft/60 px-3 py-1 text-sm text-porto-muted"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="rounded-full border border-porto-soft/60 px-3 py-1 text-sm text-porto-muted"
+                    >JavaScript</span
+                  >
+                </div>
+                <div class="mt-2 flex flex-wrap gap-3">
+                  <a
+                    href="#project-1"
+                    class="flex h-11 items-center justify-center rounded-full bg-porto-accent px-5 text-sm font-medium text-porto-bg shadow-[0_18px_40px_-22px_rgba(107,15,26,0.9)] transition-transform duration-150 hover:-translate-y-0.5 active:scale-95"
+                    >Lihat Project</a
+                  >
+                  <a
+                    href="mailto:hello@example.com"
+                    class="flex h-11 items-center justify-center rounded-full border border-porto-soft/60 bg-porto-bg px-5 text-sm font-medium text-porto-ink transition-transform duration-150 hover:-translate-y-0.5 active:scale-95"
+                    >Kontak</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Project 1 showcase -->
+      <section class="pb-24 pt-12">
+        <div class="mx-auto w-full max-w-layout px-6 md:px-14">
+          <div
+            class="mx-auto flex w-full max-w-5xl flex-col rounded-lg border border-porto-soft/40 bg-porto-surface shadow-[0_1px_2px_rgba(49,8,31,0.03),0_16px_40px_-12px_rgba(49,8,31,0.1)]"
+          >
+            <div class="flex items-center px-3 py-2.5 md:px-4">
+              <div class="flex w-16 gap-1.5 md:gap-2" aria-hidden="true">
+                <span class="h-3 w-3 rounded-full bg-porto-accent/70"></span
+                ><span class="h-3 w-3 rounded-full bg-porto-soft"></span
+                ><span class="h-3 w-3 rounded-full bg-porto-muted/50"></span>
+              </div>
+              <span class="mx-auto text-xs font-medium text-porto-muted"
+                >Project 1</span
+              >
+              <span class="w-16" aria-hidden="true"></span>
+            </div>
+            <img
+              src="assets/projects/project-1.svg"
+              alt="Tampilan Project 1"
+              class="block aspect-[16/10] w-full rounded-b-lg object-cover object-top"
+            />
+          </div>
+        </div>
+      </section>
+
+      <hr class="mx-auto w-full max-w-layout border-porto-soft/40" />
+
+      <!-- Translate the way you like -->
+      <section id="project-1" class="py-24">
+        <div
+          class="mx-auto grid w-full max-w-layout gap-12 px-6 md:px-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-20"
+        >
+          <div class="lg:sticky lg:top-32">
+            <h2
+              class="text-balance text-4xl font-semibold tracking-[-0.03em] text-porto-ink sm:text-[44px] sm:leading-[48px]"
+            >
+              Translate the way you like
+            </h2>
+            <p
+              class="mt-6 text-[19px] leading-[27px] tracking-[-0.016em] text-porto-muted"
+            >
+              Full-page translation, sentence translation — point at anything
+              you don't understand
+            </p>
+          </div>
+          <div class="flex flex-col gap-16 lg:gap-24">
+            <article class="space-y-4">
+              <div
+                class="flex h-56 w-full flex-col justify-center gap-3 overflow-hidden rounded-2xl bg-porto-surface p-4 text-xs leading-5 sm:h-72 sm:p-8 sm:text-sm sm:leading-6"
+              >
+                <div>
+                  <p class="text-porto-muted">
+                    生きている限り、バッドエンドはない。
+                  </p>
+                  <p class="text-porto-ink">
+                    As long as you're alive, there's no bad ending.
+                  </p>
+                </div>
+                <div>
+                  <p class="text-porto-muted">
+                    芸人に本当の引退はないと僕は思っている。
+                  </p>
+                  <p class="text-porto-ink">
+                    I believe comedians never truly retire.
+                  </p>
+                </div>
+                <div>
+                  <p class="text-porto-muted">
+                    無為に過ごした日々も、いつの日か宝物になる。
+                  </p>
+                  <p class="text-porto-ink">
+                    Even the days you spent aimlessly will one day become
+                    treasures.
+                  </p>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-porto-ink">
+                Bilingual mode
+              </h3>
+              <p class="text-porto-muted">
+                Translations appear right alongside the original text, keeping
+                the page layout intact. Want just one paragraph? Hover over it
+                and press the hotkey (Ctrl by default).
+              </p>
+            </article>
+            <article class="space-y-4">
+              <div
+                class="flex h-56 w-full flex-col justify-center gap-3 overflow-hidden rounded-2xl bg-porto-surface p-4 text-xs leading-5 sm:h-72 sm:p-8 sm:text-sm sm:leading-6 text-porto-ink"
+              >
+                <p>As long as you're alive, there's no bad ending.</p>
+                <p>I believe comedians never truly retire.</p>
+                <p>
+                  Even the days you spent aimlessly will one day become
+                  treasures.
+                </p>
+              </div>
+              <h3 class="text-xl font-semibold text-porto-ink">
+                Translation only
+              </h3>
+              <p class="text-porto-muted">
+                Replaces the original with the translation for distraction-free
+                reading. The same hover-plus-hotkey (Ctrl by default) paragraph
+                translation works here too.
+              </p>
+            </article>
+            <article class="space-y-4">
+              <div
+                class="relative flex h-56 w-full flex-col justify-center overflow-hidden rounded-2xl bg-porto-surface p-4 sm:h-72 sm:p-8"
+              >
+                <p class="text-xs text-porto-muted sm:text-sm">
+                  <mark
+                    class="rounded-sm bg-porto-accent/20 px-0.5 text-porto-ink"
+                    >生きている限り、バッドエンドはない。</mark
+                  >
+                </p>
+                <div
+                  class="mt-4 max-w-sm rounded-xl border border-porto-soft/40 bg-porto-bg p-4 shadow-[0_12px_32px_-8px_rgba(49,8,31,0.15)]"
+                >
+                  <div
+                    class="flex items-center justify-between text-xs font-semibold text-porto-ink"
+                  >
+                    <span>Translation</span
+                    ><span class="text-porto-muted">English</span>
+                  </div>
+                  <p class="mt-2 text-sm text-porto-ink">
+                    As long as you're alive, there's no bad ending.
+                  </p>
+                  <div class="mt-3 text-[11px] font-medium text-porto-muted">
+                    DeepSeek
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-porto-ink">
+                Selection translation
+              </h3>
+              <p class="text-porto-muted">
+                Select any sentence on the page and get an instant translation,
+                right where you are.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mx-auto w-full max-w-layout border-porto-soft/40" />
+
+      <!-- Feature: Flexible -->
+      <section id="project-2" class="py-24">
+        <div
+          class="mx-auto grid w-full max-w-layout gap-12 px-6 md:px-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20"
+        >
+          <div>
+            <p class="mb-4 text-sm font-semibold text-porto-accent">Flexible</p>
+            <h2
+              class="text-balance text-4xl font-semibold tracking-[-0.03em] text-porto-ink sm:text-[44px] sm:leading-[48px]"
+            >
+              Select text. Run your action.
+            </h2>
+            <p
+              class="mt-6 text-[19px] leading-[27px] tracking-[-0.016em] text-porto-muted"
+            >
+              Select any text on a page and run a Custom AI Action you wrote. It
+              uses the article's context to answer intelligently.
+            </p>
+            <ul class="mt-4 grid grid-cols-2 gap-x-5 gap-y-4 text-porto-accent">
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Dictionary</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Improve writing</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Convert timezones</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Build your own</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex h-72 w-full flex-col justify-center overflow-hidden rounded-2xl bg-porto-surface p-5 sm:h-80 sm:p-8 lg:order-first"
+          >
+            <p class="text-sm leading-6 text-porto-muted">
+              我们能遇见真是<mark
+                class="rounded-sm bg-porto-accent/20 px-0.5 text-porto-ink"
+                >缘分</mark
+              >。
+            </p>
+            <div class="mt-4 flex justify-center">
+              <div
+                class="inline-flex items-center gap-1 rounded-xl border border-porto-soft/40 bg-porto-bg p-1 text-xs font-medium shadow-[0_12px_32px_-8px_rgba(49,8,31,0.15)]"
+              >
+                <span class="rounded-lg bg-porto-accent px-2 py-1 text-porto-bg"
+                  >Dictionary</span
+                >
+                <span class="rounded-lg px-2 py-1 text-porto-muted"
+                  >Improve writing</span
+                >
+                <span class="rounded-lg px-2 py-1 text-porto-muted"
+                  >Convert timezones</span
+                >
+              </div>
+            </div>
+            <div
+              class="mx-auto mt-4 w-full max-w-xs rounded-xl border border-porto-soft/40 bg-porto-bg p-4"
+            >
+              <div class="flex items-baseline gap-2">
+                <span class="text-lg font-bold text-porto-ink">缘分</span
+                ><span class="text-xs text-porto-muted">yuánfèn</span>
+              </div>
+              <p class="mt-1 text-sm text-porto-ink">
+                A fateful bond that brings people together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mx-auto w-full max-w-layout border-porto-soft/40" />
+
+      <!-- Feature: Effortless -->
+      <section id="project-3" class="py-24">
+        <div
+          class="mx-auto grid w-full max-w-layout gap-12 px-6 md:px-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20"
+        >
+          <div>
+            <p class="mb-4 text-sm font-semibold text-porto-accent">
+              Effortless
+            </p>
+            <h2
+              class="text-balance text-4xl font-semibold tracking-[-0.03em] text-porto-ink sm:text-[44px] sm:leading-[48px]"
+            >
+              You review. We handle the scheduling.
+            </h2>
+            <p
+              class="mt-6 text-[19px] leading-[27px] tracking-[-0.016em] text-porto-muted"
+            >
+              Every word you save becomes a flashcard. Spaced repetition decides
+              when you see it next — right before you'd forget.
+            </p>
+            <ul class="mt-4 space-y-4 text-porto-accent">
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Auto-scheduled reviews</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Just rate each card</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Custom card templates</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="relative flex h-72 w-full items-center justify-center overflow-hidden rounded-2xl bg-porto-surface px-8 sm:h-80"
+          >
+            <div
+              class="absolute h-48 w-[calc(100%-4rem)] max-w-xs translate-y-3 scale-95 rounded-xl border border-porto-soft/40 bg-porto-bg opacity-60"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="relative flex h-48 w-full max-w-xs flex-col justify-center gap-2 rounded-xl border border-porto-soft/40 bg-porto-bg p-4 shadow-[0_8px_24px_-8px_rgba(49,8,31,0.12)]"
+            >
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl font-bold text-porto-ink">加油</span
+                ><span class="text-xs text-porto-muted">jiāyóu</span>
+              </div>
+              <p class="text-sm text-porto-ink">Keep going; you can do it!</p>
+              <div
+                class="mt-2 grid grid-cols-3 gap-2 text-center text-xs font-medium"
+              >
+                <span
+                  class="rounded-lg py-1.5 text-porto-muted ring-1 ring-porto-soft/40"
+                  >Again</span
+                >
+                <span
+                  class="rounded-lg py-1.5 text-porto-muted ring-1 ring-porto-soft/40"
+                  >Hard</span
+                >
+                <span class="rounded-lg bg-porto-accent py-1.5 text-porto-bg"
+                  >Easy</span
+                >
+              </div>
+              <p class="text-center text-[11px] text-porto-muted">
+                Next review in 3 days
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mx-auto w-full max-w-layout border-porto-soft/40" />
+
+      <!-- Feature: Immersive Learning -->
+      <section id="project-4" class="py-24">
+        <div
+          class="mx-auto grid w-full max-w-layout gap-12 px-6 md:px-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-20"
+        >
+          <div>
+            <p class="mb-4 text-sm font-semibold text-porto-accent">
+              Immersive Learning
+            </p>
+            <h2
+              class="text-balance text-4xl font-semibold tracking-[-0.03em] text-porto-ink sm:text-[44px] sm:leading-[48px]"
+            >
+              Learn from what you watch.
+            </h2>
+            <p
+              class="mt-6 text-[19px] leading-[27px] tracking-[-0.016em] text-porto-muted"
+            >
+              Turn on bilingual subtitles on YouTube — the original line and
+              your language, side by side. See a new word? Select it right in
+              the subtitle, save it, and it comes back as a flashcard.
+            </p>
+            <ul class="mt-4 space-y-4 text-porto-accent">
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Bilingual subtitles</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Look up words in subtitles</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  class="text-[17px] font-medium leading-[26px] text-porto-ink"
+                  >Words become flashcards</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="relative flex h-72 w-full flex-col justify-end overflow-hidden rounded-2xl bg-porto-ink p-5 sm:h-80 sm:p-8"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-porto-accent"
+              >
+                <div
+                  class="ml-1 h-0 w-0 border-y-[10px] border-l-[16px] border-y-transparent border-l-porto-bg"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="relative mx-auto rounded-lg bg-black/40 px-4 py-2 text-center"
+            >
+              <p class="text-lg font-semibold text-porto-bg">
+                每天<mark
+                  class="rounded-sm bg-porto-accent px-0.5 text-porto-bg"
+                  >进步</mark
+                >一点点。
+              </p>
+              <p class="text-sm text-porto-bg/80">
+                Progress a little bit every day.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="mx-auto w-full max-w-layout border-porto-soft/40" />
+
+      <!-- All projects showcase -->
+      <section id="showcase" class="w-full overflow-hidden py-24">
+        <div class="mb-10 px-4 text-center">
+          <h2
+            class="text-balance text-4xl font-semibold tracking-[-0.03em] text-porto-ink sm:text-[44px] sm:leading-[48px]"
+          >
+            Semua Project
+          </h2>
+          <p class="mt-4 text-[19px] leading-[27px] text-porto-muted">
+            Kumpulan project yang pernah aku kerjakan.
+          </p>
+        </div>
+        <div class="marquee p-2 [--duration:60s]" data-copies="1">
+          <div class="marquee-track animate-marquee">
+            <figure
+              class="w-80 shrink-0 overflow-hidden rounded-2xl bg-porto-surface ring-1 ring-porto-soft/40 sm:w-96"
+            >
+              <img
+                src="assets/projects/project-1.svg"
+                alt="Project 1"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption
+                class="px-4 py-3 text-sm font-semibold text-porto-ink"
+              >
+                Project 1
+              </figcaption>
+            </figure>
+            <figure
+              class="w-80 shrink-0 overflow-hidden rounded-2xl bg-porto-surface ring-1 ring-porto-soft/40 sm:w-96"
+            >
+              <img
+                src="assets/projects/project-2.svg"
+                alt="Project 2"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption
+                class="px-4 py-3 text-sm font-semibold text-porto-ink"
+              >
+                Project 2
+              </figcaption>
+            </figure>
+            <figure
+              class="w-80 shrink-0 overflow-hidden rounded-2xl bg-porto-surface ring-1 ring-porto-soft/40 sm:w-96"
+            >
+              <img
+                src="assets/projects/project-3.svg"
+                alt="Project 3"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption
+                class="px-4 py-3 text-sm font-semibold text-porto-ink"
+              >
+                Project 3
+              </figcaption>
+            </figure>
+            <figure
+              class="w-80 shrink-0 overflow-hidden rounded-2xl bg-porto-surface ring-1 ring-porto-soft/40 sm:w-96"
+            >
+              <img
+                src="assets/projects/project-4.svg"
+                alt="Project 4"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption
+                class="px-4 py-3 text-sm font-semibold text-porto-ink"
+              >
+                Project 4
+              </figcaption>
+            </figure>
+            <figure
+              class="w-80 shrink-0 overflow-hidden rounded-2xl bg-porto-surface ring-1 ring-porto-soft/40 sm:w-96"
+            >
+              <img
+                src="assets/projects/project-5.svg"
+                alt="Project 5"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption
+                class="px-4 py-3 text-sm font-semibold text-porto-ink"
+              >
+                Project 5
+              </figcaption>
+            </figure>
+            <figure
+              class="w-80 shrink-0 overflow-hidden rounded-2xl bg-porto-surface ring-1 ring-porto-soft/40 sm:w-96"
+            >
+              <img
+                src="assets/projects/project-6.svg"
+                alt="Project 6"
+                class="aspect-[16/10] w-full object-cover"
+              />
+              <figcaption
+                class="px-4 py-3 text-sm font-semibold text-porto-ink"
+              >
+                Project 6
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="relative isolate flex min-h-[520px] w-full items-center justify-center overflow-hidden px-6 py-28"
+      >
+        <div
+          class="pointer-events-none absolute inset-0 select-none [mask-image:linear-gradient(to_bottom,white,transparent)]"
+          aria-hidden="true"
+        >
+          <div
+            class="ripple-ring h-[210px] w-[210px] motion-safe:animate-ripple"
+          ></div>
+          <div
+            class="ripple-ring h-[280px] w-[280px] motion-safe:animate-ripple [animation-delay:0.06s]"
+          ></div>
+          <div
+            class="ripple-ring h-[350px] w-[350px] motion-safe:animate-ripple [animation-delay:0.12s]"
+          ></div>
+          <div
+            class="ripple-ring h-[420px] w-[420px] motion-safe:animate-ripple [animation-delay:0.18s]"
+          ></div>
+          <div
+            class="ripple-ring h-[490px] w-[490px] motion-safe:animate-ripple [animation-delay:0.24s]"
+          ></div>
+          <div
+            class="ripple-ring h-[560px] w-[560px] motion-safe:animate-ripple [animation-delay:0.3s]"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 flex w-full max-w-5xl flex-col items-center gap-12 text-center"
+        >
+          <div class="flex flex-col items-center gap-6">
+            <h2
+              class="max-w-4xl text-balance text-4xl font-semibold tracking-tight text-porto-ink sm:text-5xl md:text-6xl"
+            >
+              Start learning languages without the grind
+            </h2>
+            <p
+              class="max-w-3xl text-pretty text-lg font-medium leading-8 text-porto-muted sm:text-xl"
+            >
+              Focus on learning. We’ll help arrange the rest.
+            </p>
+          </div>
+          <div
+            class="flex w-full flex-col items-center gap-4 md:w-auto md:flex-row md:gap-6"
+          >
+            <a
+              href="#project-1"
+              class="flex h-[3.25rem] min-w-[12rem] items-center justify-center rounded-full bg-porto-accent px-6 text-lg font-medium text-porto-bg shadow-[0_18px_40px_-22px_rgba(107,15,26,0.9)] transition-transform hover:-translate-y-0.5 active:scale-95 max-md:w-full"
+              >Get started</a
+            >
+            <a
+              href="#showcase"
+              class="flex h-[3.25rem] min-w-[12rem] items-center justify-center rounded-full border border-porto-soft/60 bg-porto-surface px-6 text-lg font-medium text-porto-ink transition-transform hover:-translate-y-0.5 active:scale-95 max-md:w-full"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-porto-ink text-porto-bg">
+      <div class="mx-auto w-full max-w-layout px-6 py-16 md:px-14">
+        <div
+          class="flex flex-col gap-y-10 xl:flex-row xl:justify-between xl:gap-x-16"
+        >
+          <div class="flex flex-col gap-y-2 xl:max-w-xs">
+            <img src="assets/logo.png" alt="" class="h-8 w-8" />
+            <p class="text-sm font-medium">
+              Learn languages deeply and effortlessly with AI.
+            </p>
+            <p class="text-sm text-porto-bg/60">Copyright © 2026</p>
+          </div>
+          <nav
+            aria-label="Footer"
+            class="grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-[repeat(4,auto)] lg:justify-between xl:flex-1"
+          >
+            <div>
+              <h3 class="text-sm font-semibold">Features</h3>
+              <ul class="mt-4 space-y-2 text-sm text-porto-bg/70">
+                <li>
+                  <a href="#" class="hover:text-porto-bg"
+                    >YouTube dual subtitles</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-porto-bg">Page translation</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-porto-bg"
+                    >Selection translation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-porto-bg">Text to speech</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-porto-bg">Custom AI actions</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-porto-bg">Flashcard review</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold">Compare</h3>
+              <ul class="mt-4 space-y-2 text-sm text-porto-bg/70">
+                <li>
+                  <a href="#" class="hover:text-porto-bg"
+                    >vs Immersive Translate</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold">Contact</h3>
+              <ul class="mt-4 space-y-2 text-sm text-porto-bg/70">
+                <li><a href="#" class="hover:text-porto-bg">Contact us</a></li>
+                <li><a href="#" class="hover:text-porto-bg">About us</a></li>
+                <li>
+                  <a href="https://github.com/" class="hover:text-porto-bg"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a href="https://discord.com/" class="hover:text-porto-bg"
+                    >Discord</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold">Legal</h3>
+              <ul class="mt-4 space-y-2 text-sm text-porto-bg/70">
+                <li>
+                  <a href="#" class="hover:text-porto-bg">Terms of Service</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-porto-bg">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
