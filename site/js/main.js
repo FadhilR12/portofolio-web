@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFlyouts();
   initMobileNav();
   initMarquees();
+  initProjectNavigation();
+  initProjectReveal();
 });
 
 /* ---------- Flyout dropdowns (hover on desktop, click/keyboard everywhere) ---------- */
@@ -80,4 +82,78 @@ function initMarquees() {
       marquee.appendChild(clone);
     }
   });
+}
+
+/* ---------- Project links: smooth scrolling and target feedback ---------- */
+function initProjectNavigation() {
+  const projectLinks = document.querySelectorAll(
+    'a[href^="#project-"], a[href="#showcase"]',
+  );
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  projectLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+
+      event.preventDefault();
+      closeMobileNavigation();
+      target.scrollIntoView({
+        behavior: reducedMotion.matches ? 'auto' : 'smooth',
+        block: 'start',
+      });
+
+      window.history.replaceState(null, '', link.getAttribute('href'));
+      target.classList.remove('is-targeted');
+      window.requestAnimationFrame(() => target.classList.add('is-targeted'));
+      window.setTimeout(() => target.classList.remove('is-targeted'), 1200);
+    });
+  });
+}
+
+function closeMobileNavigation() {
+  const panel = document.getElementById('mobile-nav');
+  const toggle = document.getElementById('nav-toggle');
+  if (!panel || panel.dataset.open !== 'true') return;
+
+  panel.dataset.open = 'false';
+  toggle?.setAttribute('aria-expanded', 'false');
+  toggle?.querySelector('[data-icon="open"]')?.classList.remove('hidden');
+  toggle?.querySelector('[data-icon="close"]')?.classList.add('hidden');
+  panel.querySelectorAll('details[open]').forEach((details) => {
+    details.removeAttribute('open');
+  });
+}
+
+/* ---------- Project sections: reveal content as it enters the viewport ---------- */
+function initProjectReveal() {
+  const sections = document.querySelectorAll('[id^="project-"], #showcase');
+  const revealItems = [];
+
+  sections.forEach((section) => {
+    const items = section.querySelectorAll(':scope > div > *, :scope > div > div > *');
+    items.forEach((item, index) => {
+      item.classList.add('project-reveal-item');
+      item.style.transitionDelay = `${Math.min(index * 90, 270)}ms`;
+      revealItems.push(item);
+    });
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
 }
