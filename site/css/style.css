@@ -16,6 +16,7 @@ html {
 
 /* Project navigation and reveal motion */
 [id^="project-"],
+#toy-projects,
 #showcase {
   scroll-margin-top: calc(var(--nav-height) + 16px);
 }
@@ -34,6 +35,7 @@ html {
 }
 
 [id^="project-"].is-targeted > div,
+#toy-projects.is-targeted > div,
 #showcase.is-targeted > div {
   animation: project-target-pulse 1.1s ease-out;
 }
@@ -73,7 +75,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4px);
-  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .flyout[data-open="true"] .flyout-menu {
@@ -154,12 +156,15 @@ body {
 }
 
 [id^="project-"] img,
+#toy-projects img,
 #showcase figure img {
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [id^="project-"] .overflow-hidden:hover img,
 [id^="project-"] .overflow-hidden:focus-within img,
+#toy-projects .overflow-hidden:hover img,
+#toy-projects .overflow-hidden:focus-within img,
 #showcase figure:hover img,
 #showcase figure:focus-within img {
   transform: scale(1.035);

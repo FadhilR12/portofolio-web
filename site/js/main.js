@@ -87,7 +87,7 @@ function initMarquees() {
 /* ---------- Project links: smooth scrolling and target feedback ---------- */
 function initProjectNavigation() {
   const projectLinks = document.querySelectorAll(
-    'a[href^="#project-"], a[href="#showcase"]',
+    'a[href^="#project-"], a[href="#toy-projects"], a[href="#showcase"]',
   );
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -127,7 +127,7 @@ function closeMobileNavigation() {
 
 /* ---------- Project sections: reveal content as it enters the viewport ---------- */
 function initProjectReveal() {
-  const sections = document.querySelectorAll('[id^="project-"], #showcase');
+  const sections = document.querySelectorAll('[id^="project-"], #toy-projects, #showcase');
   const revealItems = [];
 
   sections.forEach((section) => {
