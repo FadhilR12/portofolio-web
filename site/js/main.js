@@ -89,16 +89,17 @@ function initMarquees() {
   });
 }
 
-/* ---------- Project links: smooth scrolling and target feedback ---------- */
+/* ---------- In-page anchors: consistent smooth scrolling and project feedback ---------- */
 function initProjectNavigation() {
-  const projectLinks = document.querySelectorAll(
-    'a[href^="#project-"], a[href="#toy-projects"], a[href="#showcase"]',
-  );
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  projectLinks.forEach((link) => {
+  anchorLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
-      const target = document.querySelector(link.getAttribute('href'));
+      const href = link.getAttribute('href');
+      if (!href || href === '#') return;
+
+      const target = document.getElementById(decodeURIComponent(href.slice(1)));
       if (!target) return;
 
       event.preventDefault();
@@ -108,10 +109,13 @@ function initProjectNavigation() {
         block: 'start',
       });
 
-      window.history.replaceState(null, '', link.getAttribute('href'));
-      target.classList.remove('is-targeted');
-      window.requestAnimationFrame(() => target.classList.add('is-targeted'));
-      window.setTimeout(() => target.classList.remove('is-targeted'), 1200);
+      window.history.replaceState(null, '', href);
+
+      if (target.matches('[id^="project-"], #toy-projects, #showcase')) {
+        target.classList.remove('is-targeted');
+        window.requestAnimationFrame(() => target.classList.add('is-targeted'));
+        window.setTimeout(() => target.classList.remove('is-targeted'), 1000);
+      }
     });
   });
 }
