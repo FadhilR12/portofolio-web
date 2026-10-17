@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initMarquees();
   initProjectNavigation();
-  initProjectReveal();
 });
 
 /* ---------- Flyout dropdowns (hover on desktop, click/keyboard everywhere) ---------- */
@@ -61,12 +60,18 @@ function initMobileNav() {
   const setOpen = (open) => {
     panel.dataset.open = String(open);
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     toggle.querySelector('[data-icon="open"]').classList.toggle('hidden', open);
     toggle.querySelector('[data-icon="close"]').classList.toggle('hidden', !open);
   };
 
   toggle.addEventListener('click', () => setOpen(panel.dataset.open !== 'true'));
   panel.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  panel.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || panel.dataset.open !== 'true') return;
+    setOpen(false);
+    toggle.focus();
+  });
   window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => e.matches && setOpen(false));
 }
 
@@ -118,37 +123,10 @@ function closeMobileNavigation() {
 
   panel.dataset.open = 'false';
   toggle?.setAttribute('aria-expanded', 'false');
+  toggle?.setAttribute('aria-label', 'Open navigation');
   toggle?.querySelector('[data-icon="open"]')?.classList.remove('hidden');
   toggle?.querySelector('[data-icon="close"]')?.classList.add('hidden');
   panel.querySelectorAll('details[open]').forEach((details) => {
     details.removeAttribute('open');
-  });
-}
-
-/* ---------- Project sections: animate into view without hiding content ---------- */
-function initProjectReveal() {
-  const sections = document.querySelectorAll(
-    '[id^="project-"], #toy-projects, #showcase',
-  );
-  if (!sections.length || !('IntersectionObserver' in window)) return;
-
-  const observer = new IntersectionObserver(
-    (entries, currentObserver) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        currentObserver.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.08, rootMargin: '0px 0px -6% 0px' },
-  );
-
-  sections.forEach((section) => {
-    section.classList.add('project-reveal-section');
-    section.querySelectorAll(':scope > div > *').forEach((item, index) => {
-      item.classList.add('project-reveal-item');
-      item.style.animationDelay = `${Math.min(index * 100, 300)}ms`;
-    });
-    observer.observe(section);
   });
 }
