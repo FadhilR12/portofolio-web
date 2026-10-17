@@ -536,9 +536,9 @@
               >
             </div>
             <div
-              class="grid min-h-0 flex-1 grid-cols-1 gap-6 p-6 pt-0 md:grid-cols-[17rem_1fr] md:gap-6 md:p-5 md:pt-0"
+              class="grid min-h-0 flex-1 grid-cols-1 gap-5 p-4 pt-0 sm:p-6 sm:pt-0 md:grid-cols-[17rem_1fr] md:gap-6 md:p-5 md:pt-0"
             >
-              <div class="hidden flex-col items-start md:block">
+              <div class="hidden min-h-0 flex-col items-start md:flex">
                 <img
                   src="assets/1728033796507.jpeg"
                   alt="Photo of Fadhil Rahman Y"
@@ -546,23 +546,44 @@
                 />
               </div>
               <div
-                class="flex flex-col items-start justify-center gap-5 md:gap-4 md:pr-4"
+                class="flex flex-col items-start justify-center gap-4 md:gap-4 md:pr-4"
               >
+                <div class="flex w-full items-center gap-4 md:hidden">
+                  <img
+                    src="assets/1728033796507.jpeg"
+                    alt="Photo of Fadhil Rahman Y"
+                    class="h-16 w-16 shrink-0 rounded-full object-cover object-top sm:h-20 sm:w-20"
+                  />
+                  <div class="min-w-0">
+                    <p class="mb-2 text-sm font-semibold text-porto-accent">
+                      Hello, I’m
+                    </p>
+                    <h1
+                      class="text-[1.8rem] font-semibold leading-[1.05] tracking-tight text-porto-ink sm:text-3xl"
+                    >
+                      <span class="block min-[400px]:inline">Fadhil</span>
+                      <span class="block min-[400px]:inline">Rahman Y</span>
+                    </h1>
+                    <p class="mt-2 text-base font-medium text-porto-ink sm:text-lg">
+                      Web Developer
+                    </p>
+                  </div>
+                </div>
                 <p
                   class="hidden text-base font-semibold text-porto-accent md:block md:text-sm"
                 >
                   Hello, I’m
                 </p>
                 <h1
-                  class="w-full text-[3.5rem] font-semibold leading-[0.98] tracking-tight text-porto-ink md:text-[2.5rem] md:leading-[1.1]"
+                  class="hidden w-full text-[2.5rem] font-semibold leading-[1.1] tracking-tight text-porto-ink md:block"
                 >
                   Fadhil Rahman Y
                 </h1>
-                <p class="text-2xl font-medium text-porto-ink md:text-lg">
+                <p class="hidden text-2xl font-medium text-porto-ink md:block md:text-lg">
                   Web Developer
                 </p>
                 <p
-                  class="text-lg leading-relaxed text-porto-muted md:text-base md:text-justify md:text-[15px]"
+                  class="text-base leading-relaxed text-porto-muted md:text-justify md:text-[15px]"
                 >
                   Computer Science student interested in software development,
                   web development, and digital solutions centered on user needs.
@@ -584,16 +605,16 @@
                   >
                 </div>
                 <div
-                  class="mt-5 flex w-full flex-nowrap gap-2 sm:w-auto md:mt-2"
+                  class="mt-1 flex w-full flex-nowrap gap-2 sm:w-auto md:mt-2"
                 >
                   <a
                     href="#project-1"
-                    class="flex h-14 flex-1 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-porto-accent px-3 text-base font-medium text-porto-bg shadow-[0_18px_40px_-22px_rgba(107,15,26,0.9)] transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-95 md:h-11 md:flex-none md:rounded-full md:px-5 md:text-sm"
+                    class="flex h-12 flex-1 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-porto-accent px-3 text-sm font-medium text-porto-bg shadow-[0_18px_40px_-22px_rgba(107,15,26,0.9)] transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-95 md:h-11 md:flex-none md:rounded-full md:px-5 md:text-sm"
                     >View Projects</a
                   >
                   <a
                     href="mailto:fadhilrahman0814@gmail.com"
-                    class="flex h-14 flex-1 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-porto-soft/60 bg-porto-bg px-3 text-base font-medium text-porto-ink transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-95 md:h-11 md:flex-none md:rounded-full md:px-5 md:text-sm"
+                    class="flex h-12 flex-1 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-porto-soft/60 bg-porto-bg px-3 text-sm font-medium text-porto-ink transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-95 md:h-11 md:flex-none md:rounded-full md:px-5 md:text-sm"
                     >Contact</a
                   >
                 </div>
@@ -601,11 +622,6 @@
             </div>
           </article>
         </div>
-      </section>
-
-      <!-- TODO: ADD SOMETHING -->
-      <section class="pb-24 pt-12">
-        
       </section>
 
       <hr class="mx-auto w-full max-w-layout border-porto-soft/40" />
