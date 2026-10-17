@@ -125,24 +125,12 @@ function closeMobileNavigation() {
   });
 }
 
-/* ---------- Project sections: reveal content as it enters the viewport ---------- */
+/* ---------- Project sections: animate into view without hiding content ---------- */
 function initProjectReveal() {
-  const sections = document.querySelectorAll('[id^="project-"], #toy-projects, #showcase');
-  const revealItems = [];
-
-  sections.forEach((section) => {
-    const items = section.querySelectorAll(':scope > div > *, :scope > div > div > *');
-    items.forEach((item, index) => {
-      item.classList.add('project-reveal-item');
-      item.style.transitionDelay = `${Math.min(index * 90, 270)}ms`;
-      revealItems.push(item);
-    });
-  });
-
-  if (!('IntersectionObserver' in window)) {
-    revealItems.forEach((item) => item.classList.add('is-visible'));
-    return;
-  }
+  const sections = document.querySelectorAll(
+    '[id^="project-"], #toy-projects, #showcase',
+  );
+  if (!sections.length || !('IntersectionObserver' in window)) return;
 
   const observer = new IntersectionObserver(
     (entries, currentObserver) => {
@@ -152,8 +140,15 @@ function initProjectReveal() {
         currentObserver.unobserve(entry.target);
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+    { threshold: 0.08, rootMargin: '0px 0px -6% 0px' },
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  sections.forEach((section) => {
+    section.classList.add('project-reveal-section');
+    section.querySelectorAll(':scope > div > *').forEach((item, index) => {
+      item.classList.add('project-reveal-item');
+      item.style.animationDelay = `${Math.min(index * 100, 300)}ms`;
+    });
+    observer.observe(section);
+  });
 }
